@@ -1,0 +1,49 @@
+{
+  "name": "@anvilco/best-practices-node",
+  "version": "0.0.1",
+  "description": "A package resulting from a repository that illustrates many best practices for a Node/JS project",
+  "repository": "https://github.com/anvilco/best-practices-node.git",
+  "author": "newhouse@useanvil.com",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=12"
+  },
+  "config": {
+    "babel_target": "12"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "babel src --out-dir dist",
+    "clean:build": "yarn clean && yarn build",
+    "prepare": "yarn clean:build && husky install",
+    "develop": "nodemon --config ./nodemon.json -x 'yarn prepare && yarn start'",
+    "start": "node dist/index.js",
+    "test": "yarn prepare && node test/index.js",
+    "test:watch": "nodemon --config ./test/nodemon.json test -x 'yarn test'",
+    "my-script": "babel-node scripts/my-script.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.8",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.js": [
+      "prettier --write",
+      "eslint --quiet --cache --fix"
+    ]
+  }
+}

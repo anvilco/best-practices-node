@@ -21,6 +21,7 @@
     "start": "node dist/index.js",
     "test": "yarn prepare && node test/index.js",
     "test:watch": "nodemon --config ./test/nodemon.json test -x 'yarn test'",
+    "lint": "eslint src/**/*.js test/**/*.js",
     "my-script": "babel-node scripts/my-script.js"
   },
   "devDependencies": {

@@ -1,11 +1,30 @@
 # best-practices-node
 
-This repository creates a very simple web server for Node, while trying to exemplify many "best practices" for developing a Node/JS package.
+This boilerplate repository creates a very simple web server for Node, while trying to exemplify many "best practices" for developing a Node/JS package.
 
-Please see the accompanying blog post about this project [here][Blog Post] to learn more about what is going on!
+Please see the accompanying [blog post about this project][Blog Post] to learn more about what is going on!
+
+---
+
+**Repository provided by [Anvil](www.useanvil.com/developers)**
+
+![Horizontal Lockupblack](https://user-images.githubusercontent.com/293079/169453889-ae211c6c-7634-4ccd-8ca9-8970c2621b6f.png#gh-light-mode-only)
+![Horizontal Lockup copywhite](https://user-images.githubusercontent.com/293079/169453892-895f637b-4633-4a14-b997-960c9e17579b.png#gh-dark-mode-only)
+
+Anvil provides easy APIs for all things paperwork.
+
+1. [PDF filling API](https://www.useanvil.com/products/pdf-filling-api/) - fill out a PDF template with a web request and structured JSON data.
+2. [PDF generation API](https://www.useanvil.com/products/pdf-generation-api/) - send markdown or HTML and Anvil will render it to a PDF.
+3. [Etch e-sign with API](https://www.useanvil.com/products/etch/) - customizable, embeddable, e-signature platform with an API to control the signing process end-to-end.
+4. [Anvil Workflows (w/ API)](https://www.useanvil.com/products/workflows/) - Webforms + PDF + e-sign with a powerful no-code builder. Easily collect structured data, generate PDFs, and request signatures.
+
+Learn more on our [Anvil developer page](https://www.useanvil.com/developers/).
+
+---
 
 ### Installation
-This package isn't *really* meant to be downloaded from `npm` and used in your projects (or globally). Rather, the repository should be [cloned from Github][Repo] and played around with from there:
+
+This package isn't *really* meant to be downloaded from `npm` and used as a boilerplate in your projects (or globally). Rather, the repository should be [cloned from Github][Repo] and played around with from there:
 
 ```bash
 cd /path/to/projects
@@ -15,6 +34,7 @@ yarn install
 ```
 
 ### Usage
+
 There are a few interesting commands in this project to explore:
 
 - `yarn clean:build`: Will delete the `dist/` directory and transpile the source code in `src/` to the `dist/` directory.
